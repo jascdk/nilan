@@ -2523,7 +2523,7 @@ class Device:
     async def get_user_function_1_state(self) -> bool:
         """Get user function State."""
         result = await self._modbus.async_pb_call(
-            self._unit_id, CTS602HoldingRegisters.program_user_func_act, 1, "holding"
+            self._unit_id, CTS602HoldingRegisters.output_user_func, 1, "holding"
         )
         if result is not None:
             value = int.from_bytes(
@@ -2540,7 +2540,7 @@ class Device:
     async def get_user_function_2_state(self) -> bool:
         """Get user function 2 State."""
         result = await self._modbus.async_pb_call(
-            self._unit_id, CTS602HoldingRegisters.program_user_2_func_act, 1, "holding"
+            self._unit_id, CTS602HoldingRegisters.output_user_func_2, 1, "holding"
         )
         if result is not None:
             value = int.from_bytes(
@@ -2661,7 +2661,7 @@ class Device:
                 "little",
                 signed=True,
             )
-            return float(value) / 100
+            return float(value)
         _LOGGER.error("Could not read get_user_function_1_temperature")
         return None
 
@@ -2676,7 +2676,7 @@ class Device:
                 "little",
                 signed=True,
             )
-            return float(value) / 100
+            return float(value)
         _LOGGER.error("Could not read get_user_function_1_temperature_offset")
         return None
 
@@ -2705,7 +2705,7 @@ class Device:
                 "little",
                 signed=True,
             )
-            return float(value) / 100
+            return float(value)
         _LOGGER.error("Could not read get_user_function_2_temperature")
         return None
 
@@ -2720,7 +2720,7 @@ class Device:
                 "little",
                 signed=True,
             )
-            return float(value) / 100
+            return float(value)
         _LOGGER.error("Could not read get_user_function_2_temperature_offset")
         return None
 
@@ -3895,7 +3895,7 @@ class Device:
         """Set user function 1 temperature (Extend function)."""
         if -20 <= value <= 40:
             output = int.from_bytes(
-                int(value * 100).to_bytes(2, "little", signed=True),
+                int(value).to_bytes(2, "little", signed=True),
                 "little",
                 signed=False,
             )
@@ -3912,7 +3912,7 @@ class Device:
         """Set user function 1 temperature offset (External heater offset function)."""
         if -20 <= value <= 20:
             output = int.from_bytes(
-                int(value * 100).to_bytes(2, "little", signed=True),
+                int(value).to_bytes(2, "little", signed=True),
                 "little",
                 signed=False,
             )
@@ -3941,7 +3941,7 @@ class Device:
         """Set user function 2 temperature (Extend function)."""
         if -20 <= value <= 40:
             output = int.from_bytes(
-                int(value * 100).to_bytes(2, "little", signed=True),
+                int(value).to_bytes(2, "little", signed=True),
                 "little",
                 signed=False,
             )
@@ -3958,7 +3958,7 @@ class Device:
         """Set user function 2 temperature offset (External heater offset function)."""
         if -20 <= value <= 20:
             output = int.from_bytes(
-                int(value * 100).to_bytes(2, "little", signed=True),
+                int(value).to_bytes(2, "little", signed=True),
                 "little",
                 signed=False,
             )
