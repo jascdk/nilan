@@ -173,7 +173,11 @@
           "hps_water_heater_setpoint": {"name": "AIR/GEO Water Setpoint"},
           "hps_heating_setpoint_min": {"name": "AIR/GEO Flow Temperature Setpoint"},
           "user_function_1_timer": {"name": "User Function 1 Timer"},
-          "user_function_2_timer": {"name": "User Function 2 Timer"}
+          "user_function_1_temperature": {"name": "User Function 1 Temperature"},
+          "user_function_1_temperature_offset": {"name": "User Function 1 Temperature Offset"},
+          "user_function_2_timer": {"name": "User Function 2 Timer"},
+          "user_function_2_temperature": {"name": "User Function 2 Temperature"},
+          "user_function_2_temperature_offset": {"name": "User Function 2 Temperature Offset"}
         },
         "select": {
             "air_filter_alarm_interval": {
@@ -347,7 +351,20 @@
                     "0": "Off",
                     "1": "Extend",
                     "2": "Inlet",
-                    "3": "Exhaust"
+                    "3": "Exhaust",
+                    "4": "External Heater Offset",
+                    "5": "Ventilate",
+                    "6": "Cooker Hood"
+                }
+            },
+            "user_function_1_ventilation_step": {
+                "name": "User Function 1 Ventilation Step",
+                "state": {
+                    "0": "Off",
+                    "1": "Step 1",
+                    "2": "Step 2",
+                    "3": "Step 3",
+                    "4": "Step 4"
                 }
             },
             "user_function_2_mode": {
@@ -356,7 +373,20 @@
                     "0": "Off",
                     "1": "Extend",
                     "2": "Inlet",
-                    "3": "Exhaust"
+                    "3": "Exhaust",
+                    "4": "External Heater Offset",
+                    "5": "Ventilate",
+                    "6": "Cooker Hood"
+                }
+            },
+            "user_function_2_ventilation_step": {
+                "name": "User Function 2 Ventilation Step",
+                "state": {
+                    "0": "Off",
+                    "1": "Step 1",
+                    "2": "Step 2",
+                    "3": "Step 3",
+                    "4": "Step 4"
                 }
             },
             "reset_alarm": {

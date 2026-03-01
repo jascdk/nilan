@@ -233,8 +233,17 @@ ATTRIBUTE_TO_SELECT = {
             "user_function_1_mode",
             "set_user_function_1_mode",
             EntityCategory.CONFIG,
-            ["0", "1", "2", "3"],
+            ["0", "1", "2", "3", "4", "5", "6"],
             "mdi:account-cog",
+        )
+    ],
+    "get_user_function_1_ventilation_step": [
+        Map(
+            "user_function_1_ventilation_step",
+            "set_user_function_1_ventilation_step",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3", "4"],
+            "mdi:fan",
         )
     ],
     "get_user_function_2_mode": [
@@ -242,8 +251,17 @@ ATTRIBUTE_TO_SELECT = {
             "user_function_2_mode",
             "set_user_function_2_mode",
             EntityCategory.CONFIG,
-            ["0", "1", "2", "3"],
+            ["0", "1", "2", "3", "4", "5", "6"],
             "mdi:account-cog",
+        )
+    ],
+    "get_user_function_2_ventilation_step": [
+        Map(
+            "user_function_2_ventilation_step",
+            "set_user_function_2_ventilation_step",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3", "4"],
+            "mdi:fan",
         )
     ],
 }

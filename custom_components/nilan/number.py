@@ -541,6 +541,32 @@ ATTRIBUTE_TO_NUMBERS = {
             "mdi:timer",
         )
     ],
+    "get_user_function_1_temperature": [
+        Map(
+            "user_function_1_temperature",
+            "set_user_function_1_temperature",
+            EntityCategory.CONFIG,
+            -20,
+            40,
+            1,
+            NumberMode.BOX,
+            UnitOfTemperature.CELSIUS,
+            "mdi:thermometer",
+        )
+    ],
+    "get_user_function_1_temperature_offset": [
+        Map(
+            "user_function_1_temperature_offset",
+            "set_user_function_1_temperature_offset",
+            EntityCategory.CONFIG,
+            -20,
+            20,
+            1,
+            NumberMode.BOX,
+            UnitOfTemperature.CELSIUS,
+            "mdi:thermometer-plus",
+        )
+    ],
     "get_user_function_2_timer": [
         Map(
             "user_function_2_timer",
@@ -552,6 +578,32 @@ ATTRIBUTE_TO_NUMBERS = {
             NumberMode.BOX,
             UnitOfTime.MINUTES,
             "mdi:timer",
+        )
+    ],
+    "get_user_function_2_temperature": [
+        Map(
+            "user_function_2_temperature",
+            "set_user_function_2_temperature",
+            EntityCategory.CONFIG,
+            -20,
+            40,
+            1,
+            NumberMode.BOX,
+            UnitOfTemperature.CELSIUS,
+            "mdi:thermometer",
+        )
+    ],
+    "get_user_function_2_temperature_offset": [
+        Map(
+            "user_function_2_temperature_offset",
+            "set_user_function_2_temperature_offset",
+            EntityCategory.CONFIG,
+            -20,
+            20,
+            1,
+            NumberMode.BOX,
+            UnitOfTemperature.CELSIUS,
+            "mdi:thermometer-plus",
         )
     ],
 }
