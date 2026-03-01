@@ -331,6 +331,16 @@
                 "2": "Auto"
               }
           },
+            "week_program_select": {
+                "name": "Week Program",
+                "state": {
+                    "0": "None",
+                    "1": "Program 1",
+                    "2": "Program 2",
+                    "3": "Program 3",
+                    "4": "Erase"
+                }
+            },
             "user_function_1_mode": {
                 "name": "User Function 1 Mode",
                 "state": {

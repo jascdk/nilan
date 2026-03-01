@@ -219,6 +219,15 @@ ATTRIBUTE_TO_SELECT = {
             None,
         )
     ],
+    "get_week_program_select": [
+        Map(
+            "week_program_select",
+            "set_week_program_select",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3", "4"],
+            "mdi:calendar-week",
+        )
+    ],
     "get_user_function_1_mode": [
         Map(
             "user_function_1_mode",
