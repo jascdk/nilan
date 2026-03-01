@@ -2523,7 +2523,7 @@ class Device:
     async def get_user_function_1_state(self) -> bool:
         """Get user function State."""
         result = await self._modbus.async_pb_call(
-            self._unit_id, CTS602InputRegisters.input_user_func, 1, "input"
+            self._unit_id, CTS602HoldingRegisters.program_user_func_act, 1, "holding"
         )
         if result is not None:
             value = int.from_bytes(
@@ -2540,7 +2540,7 @@ class Device:
     async def get_user_function_2_state(self) -> bool:
         """Get user function 2 State."""
         result = await self._modbus.async_pb_call(
-            self._unit_id, CTS602InputRegisters.input_user_func_2, 1, "input"
+            self._unit_id, CTS602HoldingRegisters.program_user_2_func_act, 1, "holding"
         )
         if result is not None:
             value = int.from_bytes(
