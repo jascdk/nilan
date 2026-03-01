@@ -2762,6 +2762,28 @@ class Device:
             return True
         return False
 
+    async def copy_day_program(self) -> bool:
+        """Copy current day week program to the next day (wraps Sunday back to Monday)."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_edit_period, 1, "holding"
+        )
+        if result is not None:
+            current_day = int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+            next_day = (current_day + 1) % 7
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_edit_period_nx,
+                [next_day],
+                "write_registers",
+            )
+            return True
+        _LOGGER.error("Could not read program_edit_period for copy_day_program")
+        return False
+
     async def get_user_function_1_mode(self) -> int:
         """Get user function 1 configured mode."""
         result = await self._modbus.async_pb_call(

@@ -53,7 +53,8 @@
             "heater_relay_3": {"name": "Heater Relay 3"}
         },
         "button": {
-          "sync_time": {"name": "Synchronize Time and Date"}
+          "sync_time": {"name": "Synchronize Time and Date"},
+          "copy_day_program": {"name": "Copy Week Program Day to Next Day"}
         },
         "climate": {
           "hvac": {

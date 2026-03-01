@@ -52,7 +52,8 @@
           "heater_relay_3": {"name": "Varmerelé 3"}
       },
       "button": {
-          "sync_time": {"name": "Synkroniser tid og dato"}
+          "sync_time": {"name": "Synkroniser tid og dato"},
+          "copy_day_program": {"name": "Kopier ukeprogram til neste dag"}
       },
       "climate": {
           "hvac": {

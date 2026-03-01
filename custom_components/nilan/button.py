@@ -17,6 +17,10 @@ async def async_setup_entry(HomeAssistant, config_entry, async_add_entities):
             async_add_entities(
                 [NilanCTS602SyncTimeButton(device)], update_before_add=True
             )
+        elif attribute in ("copy_day_program"):
+            async_add_entities(
+                [NilanCTS602CopyDayProgramButton(device)], update_before_add=True
+            )
 
 
 class NilanCTS602SyncTimeButton(ButtonEntity, NilanEntity):
@@ -38,3 +42,24 @@ class NilanCTS602SyncTimeButton(ButtonEntity, NilanEntity):
     async def async_press(self) -> None:
         """Handle the button press."""
         await self._device.set_time(now())
+
+
+class NilanCTS602CopyDayProgramButton(ButtonEntity, NilanEntity):
+    """Representation of a Copy Day Program Button."""
+
+    def __init__(
+        self,
+        device,
+    ) -> None:
+        """Init Copy Day Program Button."""
+        super().__init__(device)
+        self._device = device
+        self._attr_entity_category = EntityCategory.CONFIG
+        self._attr_icon = "mdi:content-copy"
+        self._attr_translation_key = "copy_day_program"
+        self._attr_has_entity_name = True
+        self._attr_unique_id = "copy_day_program"
+
+    async def async_press(self) -> None:
+        """Handle the button press."""
+        await self._device.copy_day_program()
