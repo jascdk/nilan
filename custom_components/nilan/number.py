@@ -528,6 +528,32 @@ ATTRIBUTE_TO_NUMBERS = {
             "mdi:thermometer",
         )
     ],
+    "get_user_function_1_timer": [
+        Map(
+            "user_function_1_timer",
+            "set_user_function_1_timer",
+            EntityCategory.CONFIG,
+            0,
+            480,
+            1,
+            NumberMode.BOX,
+            UnitOfTime.MINUTES,
+            "mdi:timer",
+        )
+    ],
+    "get_user_function_2_timer": [
+        Map(
+            "user_function_2_timer",
+            "set_user_function_2_timer",
+            EntityCategory.CONFIG,
+            0,
+            480,
+            1,
+            NumberMode.BOX,
+            UnitOfTime.MINUTES,
+            "mdi:timer",
+        )
+    ],
 }
 
 

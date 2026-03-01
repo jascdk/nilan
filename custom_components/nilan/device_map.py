@@ -57,6 +57,30 @@ CTS602_ENTITY_MAP = {
         "min_hps_bus_version": 1,
         "supported_devices": ("all",),
     },
+    "get_user_function_1_mode": {
+        "entity_type": "select",
+        "min_bus_version": 2,
+        "min_hps_bus_version": 1,
+        "supported_devices": ("all",),
+    },
+    "get_user_function_1_timer": {
+        "entity_type": "number",
+        "min_bus_version": 2,
+        "min_hps_bus_version": 1,
+        "supported_devices": ("all",),
+    },
+    "get_user_function_2_mode": {
+        "entity_type": "select",
+        "min_bus_version": 2,
+        "min_hps_bus_version": 1,
+        "supported_devices": ("all",),
+    },
+    "get_user_function_2_timer": {
+        "entity_type": "number",
+        "min_bus_version": 2,
+        "min_hps_bus_version": 1,
+        "supported_devices": ("all",),
+    },
     "get_t0_controller_temperature": {
         "entity_type": "sensor",
         "min_bus_version": 1,

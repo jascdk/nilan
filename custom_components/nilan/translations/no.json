@@ -170,7 +170,9 @@
           "outdoor_temperature_compensation_curve": {"name": "Kompensasjonskurve for utetemperatur"},
           "supply_heater_delay": {"name": "Forsinkelse for tilluftsvarmer"},
           "hps_water_heater_setpoint": {"name": "AIR/GEO vann settpunkt"},
-          "hps_heating_setpoint_min": {"name": "AIR/GEO minimum strømningssettpunkt"}
+          "hps_heating_setpoint_min": {"name": "AIR/GEO minimum strømningssettpunkt"},
+          "user_function_1_timer": {"name": "Brukerfunksjon 1 tidtaker"},
+          "user_function_2_timer": {"name": "Brukerfunksjon 2 tidtaker"}
       },
       "select": {
           "air_filter_alarm_interval": {
@@ -326,6 +328,24 @@
                   "0": "Sommer",
                   "1": "Vinter",
                   "2": "Auto"
+              }
+          },
+          "user_function_1_mode": {
+              "name": "Brukerfunksjon 1 modus",
+              "state": {
+                  "0": "Av",
+                  "1": "Forleng",
+                  "2": "Innblåsing",
+                  "3": "Avtrekk"
+              }
+          },
+          "user_function_2_mode": {
+              "name": "Brukerfunksjon 2 modus",
+              "state": {
+                  "0": "Av",
+                  "1": "Forleng",
+                  "2": "Innblåsing",
+                  "3": "Avtrekk"
               }
           },
           "reset_alarm": {
