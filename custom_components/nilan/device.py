@@ -2554,6 +2554,32 @@ class Device:
         _LOGGER.error("Could not read get_user_function_2_state")
         return None
 
+    async def get_week_program_select(self) -> int:
+        """Get week program selection."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_select, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_week_program_select")
+        return None
+
+    async def set_week_program_select(self, program: int) -> bool:
+        """Set week program selection."""
+        if program in (0, 1, 2, 3, 4):
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_select,
+                [program],
+                "write_registers",
+            )
+            return True
+        return False
+
     async def get_user_function_1_mode(self) -> int:
         """Get user function 1 configured mode."""
         result = await self._modbus.async_pb_call(

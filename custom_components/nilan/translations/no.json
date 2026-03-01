@@ -330,6 +330,16 @@
                   "2": "Auto"
               }
           },
+          "week_program_select": {
+              "name": "Ukeprogram",
+              "state": {
+                  "0": "Ingen",
+                  "1": "Program 1",
+                  "2": "Program 2",
+                  "3": "Program 3",
+                  "4": "Slett"
+              }
+          },
           "user_function_1_mode": {
               "name": "Brukerfunksjon 1 modus",
               "state": {
