@@ -219,6 +219,24 @@ ATTRIBUTE_TO_SELECT = {
             None,
         )
     ],
+    "get_user_function_1_mode": [
+        Map(
+            "user_function_1_mode",
+            "set_user_function_1_mode",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3"],
+            "mdi:account-cog",
+        )
+    ],
+    "get_user_function_2_mode": [
+        Map(
+            "user_function_2_mode",
+            "set_user_function_2_mode",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3"],
+            "mdi:account-cog",
+        )
+    ],
 }
 
 MapAlarm = namedtuple(

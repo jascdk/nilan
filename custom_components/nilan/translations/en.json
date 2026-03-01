@@ -171,7 +171,9 @@
           "outdoor_temperature_compensation_curve": {"name": "Outdoor Temperature Compensation Curve"},
           "supply_heater_delay": {"name": "Supply Heater Delay"},
           "hps_water_heater_setpoint": {"name": "AIR/GEO Water Setpoint"},
-          "hps_heating_setpoint_min": {"name": "AIR/GEO Flow Temperature Setpoint"}
+          "hps_heating_setpoint_min": {"name": "AIR/GEO Flow Temperature Setpoint"},
+          "user_function_1_timer": {"name": "User Function 1 Timer"},
+          "user_function_2_timer": {"name": "User Function 2 Timer"}
         },
         "select": {
             "air_filter_alarm_interval": {
@@ -329,6 +331,24 @@
                 "2": "Auto"
               }
           },
+            "user_function_1_mode": {
+                "name": "User Function 1 Mode",
+                "state": {
+                    "0": "Off",
+                    "1": "Extend",
+                    "2": "Inlet",
+                    "3": "Exhaust"
+                }
+            },
+            "user_function_2_mode": {
+                "name": "User Function 2 Mode",
+                "state": {
+                    "0": "Off",
+                    "1": "Extend",
+                    "2": "Inlet",
+                    "3": "Exhaust"
+                }
+            },
             "reset_alarm": {
                 "name": "Reset Alarm",
                 "state": {

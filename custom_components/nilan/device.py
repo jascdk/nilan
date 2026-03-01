@@ -2554,6 +2554,62 @@ class Device:
         _LOGGER.error("Could not read get_user_function_2_state")
         return None
 
+    async def get_user_function_1_mode(self) -> int:
+        """Get user function 1 configured mode."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_user_func_set, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_user_function_1_mode")
+        return None
+
+    async def get_user_function_1_timer(self) -> int:
+        """Get user function 1 timer in minutes."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_user_time_set, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_user_function_1_timer")
+        return None
+
+    async def get_user_function_2_mode(self) -> int:
+        """Get user function 2 configured mode."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_user_2_func_set, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_user_function_2_mode")
+        return None
+
+    async def get_user_function_2_timer(self) -> int:
+        """Get user function 2 timer in minutes."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_user_2_time_set, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_user_function_2_timer")
+        return None
+
     async def get_display_led_1_state(self) -> bool:
         """Get display led 1 State (older models)."""
         result = await self._modbus.async_pb_call(
@@ -3660,3 +3716,51 @@ class Device:
             [value],
             "write_registers",
         )
+
+    async def set_user_function_1_mode(self, mode: int) -> bool:
+        """Set user function 1 mode."""
+        if mode in (0, 1, 2, 3):
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_user_func_set,
+                [mode],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def set_user_function_1_timer(self, value: int) -> bool:
+        """Set user function 1 timer in minutes."""
+        if 0 <= value <= 480:
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_user_time_set,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def set_user_function_2_mode(self, mode: int) -> bool:
+        """Set user function 2 mode."""
+        if mode in (0, 1, 2, 3):
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_user_2_func_set,
+                [mode],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def set_user_function_2_timer(self, value: int) -> bool:
+        """Set user function 2 timer in minutes."""
+        if 0 <= value <= 480:
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_user_2_time_set,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
