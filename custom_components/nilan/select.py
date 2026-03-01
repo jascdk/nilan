@@ -264,6 +264,42 @@ ATTRIBUTE_TO_SELECT = {
             "mdi:fan",
         )
     ],
+    "get_program_edit_period": [
+        Map(
+            "program_edit_period",
+            "set_program_edit_period",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3", "4", "5", "6"],
+            "mdi:calendar-week",
+        )
+    ],
+    "get_program_edit_period_nx": [
+        Map(
+            "program_edit_period_nx",
+            "set_program_edit_period_nx",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3", "4", "5", "6"],
+            "mdi:calendar-week-begin",
+        )
+    ],
+    "get_program_edit_func": [
+        Map(
+            "program_edit_func",
+            "set_program_edit_func",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3", "4", "5"],
+            "mdi:cog",
+        )
+    ],
+    "get_program_edit_vent": [
+        Map(
+            "program_edit_vent",
+            "set_program_edit_vent",
+            EntityCategory.CONFIG,
+            ["0", "1", "2", "3", "4"],
+            "mdi:fan",
+        )
+    ],
 }
 
 MapAlarm = namedtuple(

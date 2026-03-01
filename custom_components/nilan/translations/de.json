@@ -169,7 +169,10 @@
           "central_heating_min_supply_temperature": {"name": "Zentralheizung Min. Versorgungstemperatur"},
           "central_heating_max_supply_temperature": {"name": "Zentralheizung max. Versorgungstemperatur"},
           "outdoor_temperature_compensation_curve": {"name": "Außentemperatur-Kompensationskurve"},
-          "supply_heater_delay": {"name": "Verzögerung der Versorgungsheizung"}
+          "supply_heater_delay": {"name": "Verzögerung der Versorgungsheizung"},
+          "program_edit_index": {"name": "Wochenprogramm Bearbeitungsindex"},
+          "program_edit_time_start": {"name": "Wochenprogramm Startzeit"},
+          "program_edit_temp": {"name": "Wochenprogramm Temperatur"}
         },
         "select": {
             "air_filter_alarm_interval": {
@@ -317,6 +320,51 @@
                     "0": "Gesperrt",
                     "1": "Offen",
                     "2": "Ausschalter deaktivieren"
+                }
+            },
+            "program_edit_period": {
+                "name": "Wochenprogramm Tag",
+                "state": {
+                    "0": "Montag",
+                    "1": "Dienstag",
+                    "2": "Mittwoch",
+                    "3": "Donnerstag",
+                    "4": "Freitag",
+                    "5": "Samstag",
+                    "6": "Sonntag"
+                }
+            },
+            "program_edit_period_nx": {
+                "name": "Wochenprogramm nächster Tag",
+                "state": {
+                    "0": "Montag",
+                    "1": "Dienstag",
+                    "2": "Mittwoch",
+                    "3": "Donnerstag",
+                    "4": "Freitag",
+                    "5": "Samstag",
+                    "6": "Sonntag"
+                }
+            },
+            "program_edit_func": {
+                "name": "Wochenprogramm Funktion",
+                "state": {
+                    "0": "Slot 0",
+                    "1": "Slot 1",
+                    "2": "Slot 2",
+                    "3": "Slot 3",
+                    "4": "Slot 4",
+                    "5": "Slot 5"
+                }
+            },
+            "program_edit_vent": {
+                "name": "Wochenprogramm Lüftungsstufe",
+                "state": {
+                    "0": "Aus",
+                    "1": "Stufe 1",
+                    "2": "Stufe 2",
+                    "3": "Stufe 3",
+                    "4": "Stufe 4"
                 }
             },
             "reset_alarm": {

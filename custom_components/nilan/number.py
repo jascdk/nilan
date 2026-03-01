@@ -606,6 +606,45 @@ ATTRIBUTE_TO_NUMBERS = {
             "mdi:thermometer-plus",
         )
     ],
+    "get_program_edit_index": [
+        Map(
+            "program_edit_index",
+            "set_program_edit_index",
+            EntityCategory.CONFIG,
+            0,
+            41,
+            1,
+            NumberMode.BOX,
+            None,
+            "mdi:calendar-edit",
+        )
+    ],
+    "get_program_edit_time_start": [
+        Map(
+            "program_edit_time_start",
+            "set_program_edit_time_start",
+            EntityCategory.CONFIG,
+            0,
+            2345,
+            1,
+            NumberMode.BOX,
+            None,
+            "mdi:clock-start",
+        )
+    ],
+    "get_program_edit_temp": [
+        Map(
+            "program_edit_temp",
+            "set_program_edit_temp",
+            EntityCategory.CONFIG,
+            5,
+            50,
+            1,
+            NumberMode.BOX,
+            UnitOfTemperature.CELSIUS,
+            "mdi:thermometer",
+        )
+    ],
 }
 
 

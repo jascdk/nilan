@@ -2580,6 +2580,188 @@ class Device:
             return True
         return False
 
+    async def get_program_edit_index(self) -> int:
+        """Get week program edit index (0-41, 7 days x 6 slots per day)."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_edit_index, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_program_edit_index")
+        return None
+
+    async def set_program_edit_index(self, value: int) -> bool:
+        """Set week program edit index (0-41)."""
+        if 0 <= value <= 41:
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_edit_index,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def get_program_edit_period(self) -> int:
+        """Get week program edit day index (0=Monday, 6=Sunday)."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_edit_period, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_program_edit_period")
+        return None
+
+    async def set_program_edit_period(self, value: int) -> bool:
+        """Set week program edit day index (0-6)."""
+        if 0 <= value <= 6:
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_edit_period,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def get_program_edit_period_nx(self) -> int:
+        """Get week program edit next day index (0=Monday, 6=Sunday)."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_edit_period_nx, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_program_edit_period_nx")
+        return None
+
+    async def set_program_edit_period_nx(self, value: int) -> bool:
+        """Set week program edit next day index (0-6)."""
+        if 0 <= value <= 6:
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_edit_period_nx,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def get_program_edit_func(self) -> int:
+        """Get week program edit function (0-5)."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_edit_func, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_program_edit_func")
+        return None
+
+    async def set_program_edit_func(self, value: int) -> bool:
+        """Set week program edit function (0-5)."""
+        if 0 <= value <= 5:
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_edit_func,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def get_program_edit_time_start(self) -> int:
+        """Get week program edit start time (HHMM format, e.g. 800=08:00, 1215=12:15)."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_edit_time_star, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_program_edit_time_start")
+        return None
+
+    async def set_program_edit_time_start(self, value: int) -> bool:
+        """Set week program edit start time (HHMM format, 0-2345)."""
+        if 0 <= value <= 2345:
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_edit_time_star,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def get_program_edit_vent(self) -> int:
+        """Get week program edit ventilation level (0=Off, 1-4 level)."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_edit_vent, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_program_edit_vent")
+        return None
+
+    async def set_program_edit_vent(self, value: int) -> bool:
+        """Set week program edit ventilation level (0-4)."""
+        if value in (0, 1, 2, 3, 4):
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_edit_vent,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
+
+    async def get_program_edit_temp(self) -> int:
+        """Get week program edit temperature setpoint (5-50°C)."""
+        result = await self._modbus.async_pb_call(
+            self._unit_id, CTS602HoldingRegisters.program_edit_temp, 1, "holding"
+        )
+        if result is not None:
+            return int.from_bytes(
+                result.registers[0].to_bytes(2, "little", signed=False),
+                "little",
+                signed=False,
+            )
+        _LOGGER.error("Could not read get_program_edit_temp")
+        return None
+
+    async def set_program_edit_temp(self, value: int) -> bool:
+        """Set week program edit temperature setpoint (5-50°C)."""
+        if 5 <= value <= 50:
+            await self._modbus.async_pb_call(
+                self._unit_id,
+                CTS602HoldingRegisters.program_edit_temp,
+                [int(value)],
+                "write_registers",
+            )
+            return True
+        return False
+
     async def get_user_function_1_mode(self) -> int:
         """Get user function 1 configured mode."""
         result = await self._modbus.async_pb_call(
