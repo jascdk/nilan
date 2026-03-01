@@ -176,7 +176,10 @@
           "user_function_1_temperature_offset": {"name": "Brukerfunksjon 1 temperaturoffset"},
           "user_function_2_timer": {"name": "Brukerfunksjon 2 tidtaker"},
           "user_function_2_temperature": {"name": "Brukerfunksjon 2 temperatur"},
-          "user_function_2_temperature_offset": {"name": "Brukerfunksjon 2 temperaturoffset"}
+          "user_function_2_temperature_offset": {"name": "Brukerfunksjon 2 temperaturoffset"},
+          "program_edit_index": {"name": "Ukeprogram redigeringsindeks"},
+          "program_edit_time_start": {"name": "Ukeprogram tidsluke starttid"},
+          "program_edit_temp": {"name": "Ukeprogram tidsluke temperatur"}
       },
       "select": {
           "air_filter_alarm_interval": {
@@ -380,6 +383,51 @@
           },
           "user_function_2_ventilation_step": {
               "name": "Brukerfunksjon 2 ventilasjonstrinn",
+              "state": {
+                  "0": "Av",
+                  "1": "Trinn 1",
+                  "2": "Trinn 2",
+                  "3": "Trinn 3",
+                  "4": "Trinn 4"
+              }
+          },
+          "program_edit_period": {
+              "name": "Ukeprogram tidsluke dag",
+              "state": {
+                  "0": "Mandag",
+                  "1": "Tirsdag",
+                  "2": "Onsdag",
+                  "3": "Torsdag",
+                  "4": "Fredag",
+                  "5": "Lørdag",
+                  "6": "Søndag"
+              }
+          },
+          "program_edit_period_nx": {
+              "name": "Ukeprogram tidsluke neste dag",
+              "state": {
+                  "0": "Mandag",
+                  "1": "Tirsdag",
+                  "2": "Onsdag",
+                  "3": "Torsdag",
+                  "4": "Fredag",
+                  "5": "Lørdag",
+                  "6": "Søndag"
+              }
+          },
+          "program_edit_func": {
+              "name": "Ukeprogram tidsluke funksjon",
+              "state": {
+                  "0": "Luke 0",
+                  "1": "Luke 1",
+                  "2": "Luke 2",
+                  "3": "Luke 3",
+                  "4": "Luke 4",
+                  "5": "Luke 5"
+              }
+          },
+          "program_edit_vent": {
+              "name": "Ukeprogram tidsluke ventilasjonstrin",
               "state": {
                   "0": "Av",
                   "1": "Trinn 1",

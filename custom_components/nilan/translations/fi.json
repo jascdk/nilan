@@ -168,7 +168,10 @@
           "central_heating_min_supply_temperature": {"name": "Keskuslämmityksen Alaraja"},
           "central_heating_max_supply_temperature": {"name": "Keskuslämmityksen Yläraja"},
           "outdoor_temperature_compensation_curve": {"name": "Ulkolämpötilan Kompensointikäyrä"},
-          "supply_heater_delay": {"name": "Tuloilman Lämmittimen Viive"}
+          "supply_heater_delay": {"name": "Tuloilman Lämmittimen Viive"},
+          "program_edit_index": {"name": "Viikko-ohjelma muokkausindeksi"},
+          "program_edit_time_start": {"name": "Viikko-ohjelma aloitusaika"},
+          "program_edit_temp": {"name": "Viikko-ohjelma lämpötila"}
         },
         "select": {
             "air_filter_alarm_interval": {
@@ -316,6 +319,51 @@
                     "0": "Lukittu",
                     "1": "Avoin",
                     "2": "Lukitse Sammutus"
+                }
+            },
+            "program_edit_period": {
+                "name": "Viikko-ohjelma päivä",
+                "state": {
+                    "0": "Maanantai",
+                    "1": "Tiistai",
+                    "2": "Keskiviikko",
+                    "3": "Torstai",
+                    "4": "Perjantai",
+                    "5": "Lauantai",
+                    "6": "Sunnuntai"
+                }
+            },
+            "program_edit_period_nx": {
+                "name": "Viikko-ohjelma seuraava päivä",
+                "state": {
+                    "0": "Maanantai",
+                    "1": "Tiistai",
+                    "2": "Keskiviikko",
+                    "3": "Torstai",
+                    "4": "Perjantai",
+                    "5": "Lauantai",
+                    "6": "Sunnuntai"
+                }
+            },
+            "program_edit_func": {
+                "name": "Viikko-ohjelma toiminto",
+                "state": {
+                    "0": "Paikka 0",
+                    "1": "Paikka 1",
+                    "2": "Paikka 2",
+                    "3": "Paikka 3",
+                    "4": "Paikka 4",
+                    "5": "Paikka 5"
+                }
+            },
+            "program_edit_vent": {
+                "name": "Viikko-ohjelma ilmavirtausasetus",
+                "state": {
+                    "0": "Pois",
+                    "1": "Taso 1",
+                    "2": "Taso 2",
+                    "3": "Taso 3",
+                    "4": "Taso 4"
                 }
             },
             "reset_alarm": {

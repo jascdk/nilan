@@ -177,7 +177,10 @@
           "user_function_1_temperature_offset": {"name": "User Function 1 Temperature Offset"},
           "user_function_2_timer": {"name": "User Function 2 Timer"},
           "user_function_2_temperature": {"name": "User Function 2 Temperature"},
-          "user_function_2_temperature_offset": {"name": "User Function 2 Temperature Offset"}
+          "user_function_2_temperature_offset": {"name": "User Function 2 Temperature Offset"},
+          "program_edit_index": {"name": "Week Program Edit Slot Index"},
+          "program_edit_time_start": {"name": "Week Program Slot Start Time"},
+          "program_edit_temp": {"name": "Week Program Slot Temperature"}
         },
         "select": {
             "air_filter_alarm_interval": {
@@ -387,6 +390,51 @@
                     "2": "Step 2",
                     "3": "Step 3",
                     "4": "Step 4"
+                }
+            },
+            "program_edit_period": {
+                "name": "Week Program Slot Day",
+                "state": {
+                    "0": "Monday",
+                    "1": "Tuesday",
+                    "2": "Wednesday",
+                    "3": "Thursday",
+                    "4": "Friday",
+                    "5": "Saturday",
+                    "6": "Sunday"
+                }
+            },
+            "program_edit_period_nx": {
+                "name": "Week Program Slot Next Day",
+                "state": {
+                    "0": "Monday",
+                    "1": "Tuesday",
+                    "2": "Wednesday",
+                    "3": "Thursday",
+                    "4": "Friday",
+                    "5": "Saturday",
+                    "6": "Sunday"
+                }
+            },
+            "program_edit_func": {
+                "name": "Week Program Slot Function",
+                "state": {
+                    "0": "Slot 0",
+                    "1": "Slot 1",
+                    "2": "Slot 2",
+                    "3": "Slot 3",
+                    "4": "Slot 4",
+                    "5": "Slot 5"
+                }
+            },
+            "program_edit_vent": {
+                "name": "Week Program Slot Ventilation Level",
+                "state": {
+                    "0": "Off",
+                    "1": "Level 1",
+                    "2": "Level 2",
+                    "3": "Level 3",
+                    "4": "Level 4"
                 }
             },
             "reset_alarm": {
