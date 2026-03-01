@@ -172,7 +172,11 @@
           "hps_water_heater_setpoint": {"name": "AIR/GEO vann settpunkt"},
           "hps_heating_setpoint_min": {"name": "AIR/GEO minimum strømningssettpunkt"},
           "user_function_1_timer": {"name": "Brukerfunksjon 1 tidtaker"},
-          "user_function_2_timer": {"name": "Brukerfunksjon 2 tidtaker"}
+          "user_function_1_temperature": {"name": "Brukerfunksjon 1 temperatur"},
+          "user_function_1_temperature_offset": {"name": "Brukerfunksjon 1 temperaturoffset"},
+          "user_function_2_timer": {"name": "Brukerfunksjon 2 tidtaker"},
+          "user_function_2_temperature": {"name": "Brukerfunksjon 2 temperatur"},
+          "user_function_2_temperature_offset": {"name": "Brukerfunksjon 2 temperaturoffset"}
       },
       "select": {
           "air_filter_alarm_interval": {
@@ -346,7 +350,20 @@
                   "0": "Av",
                   "1": "Forleng",
                   "2": "Innblåsing",
-                  "3": "Avtrekk"
+                  "3": "Avtrekk",
+                  "4": "Ekstern varmeoffset",
+                  "5": "Ventiler",
+                  "6": "Kjøkkenvifte"
+              }
+          },
+          "user_function_1_ventilation_step": {
+              "name": "Brukerfunksjon 1 ventilasjonstrinn",
+              "state": {
+                  "0": "Av",
+                  "1": "Trinn 1",
+                  "2": "Trinn 2",
+                  "3": "Trinn 3",
+                  "4": "Trinn 4"
               }
           },
           "user_function_2_mode": {
@@ -355,7 +372,20 @@
                   "0": "Av",
                   "1": "Forleng",
                   "2": "Innblåsing",
-                  "3": "Avtrekk"
+                  "3": "Avtrekk",
+                  "4": "Ekstern varmeoffset",
+                  "5": "Ventiler",
+                  "6": "Kjøkkenvifte"
+              }
+          },
+          "user_function_2_ventilation_step": {
+              "name": "Brukerfunksjon 2 ventilasjonstrinn",
+              "state": {
+                  "0": "Av",
+                  "1": "Trinn 1",
+                  "2": "Trinn 2",
+                  "3": "Trinn 3",
+                  "4": "Trinn 4"
               }
           },
           "reset_alarm": {
