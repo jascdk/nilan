@@ -801,6 +801,12 @@ CTS602_ENTITY_MAP = {
         "min_hps_bus_version": 1,
         "supported_devices": ("all",),
     },
+    "copy_day_program": {
+        "entity_type": "button",
+        "min_bus_version": 2,
+        "min_hps_bus_version": 1,
+        "supported_devices": ("all",),
+    },
     "get_machine_type": {
         "entity_type": "config",
         "min_bus_version": 3,

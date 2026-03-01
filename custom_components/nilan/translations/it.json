@@ -53,7 +53,8 @@
             "heater_relay_3": {"name": "Relè riscaldatore 3"}
         },
         "button": {
-          "sync_time": {"name": "Sicronizza orario e data"}
+          "sync_time": {"name": "Sicronizza orario e data"},
+          "copy_day_program": {"name": "Copia il programma settimanale al giorno successivo"}
         },
         "climate": {
           "hvac": {
